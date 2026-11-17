@@ -1,7 +1,7 @@
 class Particle {
     constructor(position) {
-        this.acceleration = createVector(0, 0.05);
-        this.velocity = createVector(random(-1, 1), random(-1, 0));
+        this.acceleration = createVector(0, 0.1);
+        this.velocity = createVector(random(1.5, 2.5), random(-0.5, 0.5)); // 물뿌리개 앞쪽(오른쪽)으로
         this.position = position.copy();
         this.lifespan = 255;
     }
@@ -18,10 +18,9 @@ class Particle {
     }
 
     display() {
-        stroke(200, this.lifespan);
-        strokeWeight(2);
-        fill(127, this.lifespan);
-        ellipse(this.position.x, this.position.y, 12, 12);
+        noStroke();
+        fill(80, 170, 255, this.lifespan); // 물방울 파란색
+        ellipse(this.position.x, this.position.y, 6, 6);
     }
 
     isDead() {
