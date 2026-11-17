@@ -40,12 +40,12 @@ function mousePressed() {
   let mode = random(['rain', 'snow', 'lightning']);
 
   if (mode === 'rain') {
-    for (let i = 0; i < 40; i++) {
-      weather.add(new RainDrop(createVector(mouseX + random(-60, 60), random(-100, 0))));
+    for (let i = 0; i < 70; i++) {
+      weather.add(new RainDrop(createVector(mouseX + random(-120, 120), random(-100, 0))));
     }
   } else if (mode === 'snow') {
-    for (let i = 0; i < 30; i++) {
-      weather.add(new SnowFlake(createVector(mouseX + random(-80, 80), random(-50, 0))));
+    for (let i = 0; i < 50; i++) {
+      weather.add(new SnowFlake(createVector(mouseX + random(-150, 150), random(-50, 0))));
     }
   } else if (mode === 'lightning') {
     weather.add(new Lightning(createVector(mouseX, 0)));
