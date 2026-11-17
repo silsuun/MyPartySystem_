@@ -8,6 +8,11 @@ class ParticleSystem {
         this.particles.push(new Particle(this.origin));
     }
 
+    // Particle을 상속한 어떤 객체든 넣을 수 있음 (RainDrop, SnowFlake, Lightning ...)
+    add(particle) {
+        this.particles.push(particle);
+    }
+
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
             let p = this.particles[i];
