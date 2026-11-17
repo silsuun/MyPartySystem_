@@ -5,8 +5,8 @@
 class RainDrop extends Particle {
     constructor(position) {
         super(position);                              // 부모 생성자 먼저 호출
-        this.acceleration = createVector(0, 0.18);    // 중력이 더 강함
-        this.velocity = createVector(random(-0.3, 0.3), random(2, 6));
+        this.acceleration = createVector(0, 0.3);     // 중력이 더 강함
+        this.velocity = createVector(random(-0.3, 0.3), random(1, 5));
         this.length = random(10, 20);
     }
 
